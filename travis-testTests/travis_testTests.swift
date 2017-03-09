@@ -31,8 +31,8 @@ class travis_testTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         // Should be 25
-        let p = viewController.percentage(value: 50.0, percentage: 50.0)
-        XCTAssert(p == 25)
+        let percentage = viewController.percentage(value: 50.0, percentage: 50.0)
+        XCTAssert(percentage == 25)
         
     }
     
