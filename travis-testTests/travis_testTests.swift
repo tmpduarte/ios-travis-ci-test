@@ -32,7 +32,7 @@ class travis_testTests: XCTestCase {
         
         // Should be 25
         let percentage = viewController.percentage(value: 50.0, percentage: 50.0)
-        XCTAssert(percentage == 25)
+        XCTAssert(percentage == 25, "percentage is wrongly calculated :(")
         
     }
     
