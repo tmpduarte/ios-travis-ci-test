@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func percentage(value: Double, percentage: Double) -> Double {
+        return value * (percentage / 100)
+    }
 }
 

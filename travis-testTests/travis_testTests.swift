@@ -11,9 +11,14 @@ import XCTest
 
 class travis_testTests: XCTestCase {
     
+    var viewController: ViewController!
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        viewController = storyboard.instantiateInitialViewController() as! ViewController
     }
     
     override func tearDown() {
@@ -24,6 +29,11 @@ class travis_testTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        // Should be 25
+        let p = viewController.percentage(value: 50.0, percentage: 50.0)
+        XCTAssert(p == 25)
+        
     }
     
     func testPerformanceExample() {
